@@ -1,0 +1,73 @@
+body {
+  background-color: #272343;
+  overflow-y: hidden;
+  margin: 0;
+  animation: sky 5.5s 2s forwards;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* To animate the sky color */
+@keyframes sky {
+  50% {
+    background-color: #251e4e;
+  }
+  65% {
+    background-color: #364f6b;
+  }
+  85% {
+    background-color: #fce38a;
+  }
+  100% {
+    background-color: #ffffd2;
+  }
+}
+
+img {
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.moon {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border-radius: 50px;
+  box-shadow: -20px 10px white;
+  position: absolute;
+  left: 19.5%;
+  animation: night 15s forwards;
+  opacity: 1;
+}
+
+/* animate the moon when the sun rises */
+
+@keyframes night {
+  /* 100% {
+    transform: translateY(750px);
+  } */
+  100% {
+    opacity: 0;
+  }
+}
+
+.sun {
+  background-color: #f6c90e;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 75%;
+  top: 5%;
+  animation-timing-function: ease-in;
+  box-shadow: 0px 0px 20px 5px #f6c90e;
+  animation: sunrise 7s reverse;
+}
+
+/* animate the sunrise */
+@keyframes sunrise {
+  100% {
+    transform: translateY(750px);
+  }
+}
